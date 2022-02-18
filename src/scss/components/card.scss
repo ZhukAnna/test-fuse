@@ -2,6 +2,7 @@
   display: flex;
   gap: 38px 21px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 60px;
 }
 
@@ -14,10 +15,13 @@
     display: flex;
     justify-content: center;
     position: relative;
-    min-width: 377px;
+    width: 377px;
     height: 227px;
     background: #fff;
     overflow: hidden;
+    @media (max-width: 380px) {
+      width: 100vw;
+    }
   }
 
   &_tag {
@@ -56,9 +60,5 @@
 
   &_option {
     font-size: 14px;
-  }
-
-  img {
-    height: 227px;
   }
 }
