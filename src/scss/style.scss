@@ -10,7 +10,14 @@
   display: flex;
   flex-direction: column;
   padding: 0 50px;
+  color: #363636;
   @media (max-width: 720px) {
     padding: 0 15px;
   }
+}
+
+.flex-wrapper-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
