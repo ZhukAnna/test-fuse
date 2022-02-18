@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  @media (max-width: 720px) {
+    padding: 12px;
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #45852d;
+    @media (max-width: 720px) {
+      font-size: 24px;
+    }
+  }
+}

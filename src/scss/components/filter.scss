@@ -1,0 +1,19 @@
+.filter {
+  margin-bottom: 45px;
+  &_label {
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  &_input {
+    width: 33%;
+    min-width: 418px;
+    height: 50px;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    border-radius: 25px;
+    @media (max-width: 720px) {
+      min-width: 0;
+      height: 36px;
+    }
+  }
+}

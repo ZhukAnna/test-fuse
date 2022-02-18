@@ -1,0 +1,17 @@
+.btn {
+  width: fit-content;
+  padding: 12px 30px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  background: #fff;
+  color: #363636;
+  border: 1px solid #d8d8d8;
+  box-sizing: border-box;
+  border-radius: 25px;
+  &_icon {
+    margin-bottom: 1px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+}
