@@ -11,6 +11,8 @@
   flex-direction: column;
   padding: 0 50px;
   color: #363636;
+  max-width: 1280px;
+  margin: 0 auto;
   @media (max-width: 720px) {
     padding: 0 15px;
   }
