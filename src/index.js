@@ -37,22 +37,27 @@ xhr.onload = () => {
 
     function createCard({ id, title, address, type, price } = data) {
 
+        price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+        const tagContent = type.replace(/([a-z])([A-Z])/g, "$1 $2");
+        const tagStyle = (type === 'IndependentLiving')?'card_tag__blue':'card_tag__orange';
+
         const newCard = document.createElement('div');
         newCard.classList.add('card');
 
         newCard.innerHTML = `
         <a href="/details/${id}" target="_blank" rel="noopener noreferrer">
-            <div class="card_img">
-                <img src="https://picsum.photos/seed/${id}/400/240" alt="">
-                <div class="card_tag" style=${(type === 'IndependentLiving')?'background:#006F79':'background:#EC6608'}>
-                ${type = type.replace(/([a-z])([A-Z])/g, "$1 $2")}
+            <div class="card_img-container">
+                <img class="card_img" src="https://picsum.photos/seed/${id}/400/240" alt="">
+                <div class="card_tag ${tagStyle}">
+                ${tagContent}
                 </div>
             </div>
             <div class="card_description">
                 <h2 class="card_title">${title}</h2>
                 <p class="card_subtitle">${address}</p>
                 <p class="card_price">New Properties for Sale from 
-                    <span>£${price = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
+                    <span class="card_price-num">£${price}</span>
                 </p>
                 <p class="card_option">Shared Ownership Available</p>
             </div>
